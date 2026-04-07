@@ -7,7 +7,7 @@ from datetime import datetime
 # STEP 1: Get top story IDs
 try:
     res = requests.get("https://hacker-news.firebaseio.com/v0/topstories.json")
-    ids = res.json()[:500]
+    ids = res.json()[:50]
     print("Got", len(ids), "IDs")
 except:
     print("Error getting IDs")
@@ -23,7 +23,6 @@ for i in ids:
 
         if data and "title" in data:
             stories.append(data)
-
     except:
         print("Skip", i)
 
