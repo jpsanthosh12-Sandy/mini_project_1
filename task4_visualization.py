@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # STEP 1: Load data
-df = pd.read_csv("data/trends_analyzed.csv")
+df = pd.read_csv("data/trends_clean.csv")
 
 print("Data loaded:", df.shape)
 
